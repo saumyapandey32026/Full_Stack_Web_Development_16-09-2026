@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LECTURE 5</title>
+    <link rel="stylesheet" href="t5.css">
+</head>
+<body>
+    <h1>Lecture 5</h1>
+
+    <h2>A. ABSOLUTE PATH</h2>
+    <H3>URL (Internet link) </H3>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFkrZKKEk5xGJavQ9aDCeq0fKh5QBtacs5L8sXGUoKQQ&s=10" alt="OUR FLAG" srcset="">
+    <br>
+    <h3>Local path</h3>
+    <!-- <img src="C:\Users\saumy\OneDrive\Saumya Pandey\done-removebg-preview.png" alt="CATALYTIC DHAIRYA" height="200">    ye img show nhi karega -->
+    <!-- <img src="file:///C:/Users/saumy/OneDrive/Saumya Pandey/done-removebg-preview.png" alt="CATALYTIC DHAIRYA" height="200"> -->
+    <!-- Sahi Code -->
+    <img src="file:///C:/Users/saumy/OneDrive/Saumya Pandey/done-removebg-preview.png" alt="CATALYTIC DHAIRYA" height="200">
+
+
+    <br>
+    <h2>B. RELATIVE path</h2>
+    <H3>1st. Same Folder</H3>
+    <img src="Saumya Pandey.png" alt="Saumya Pandey" height="200">
+    <br>
+    <h3>2nd. Img usi folder ke kisi subfolder me hai</h3>
+    <img src="img/cya.png" alt="cya" height="200">
+    <br>
+    <h3>3rd. Img bahar kisi folder me hai </h3>
+    <h4>a.</h4>
+    <img src="../imgOut/ct.png" alt="ct" height="200">
+    <br>
+    <h4>b. bahar wale folder ke andar folder me img tha </h4>
+    <img src="../imgOut/imOUT/Saumya.jpeg" alt="" height="200">
+
+
+    <h1>TABLE</h1>
+    <table>
+        <tr>
+            <th>NAME</th>
+            <th>COUNTRY</th>
+            <th>COURSE</th>
+        </tr>
+        <tr>
+            <td>Saumya Pandey</td>
+            <td>India</td>
+            <td>MAD</td>
+        </tr>
+        <tr>
+            <td>Ramya Pandey</td>
+            <td>India</td>
+            <td>History</td>
+        </tr>
+
+    </table>
+
+<br>
+    <table>
+        <!-- <thead> -->
+            <tr>
+                <th rowspan="2" >name</th>
+                <th>country</th>
+                <th>subject</th>
+            </tr>
+        <!-- </thead> -->
+        <tbody>
+            <tr>
+                <td colspan="2">ram</td>
+                <td>India</td>
+                <td>History</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td rowspan="2" >siya</td>
+                <td>India</td>
+                <td>History</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <br>
+    <br> 
+    <table>
+        <thead>
+            <!-- Pehli Row -->
+            <tr>
+                <th rowspan="2">Name</th> <!-- Yeh niche do rows tak jayega -->
+                <th>Country</th>
+                <th>Subject</th>
+            </tr>
+            <!-- Dusri Row (Isme Name wali jagah pehle se occupied hai) -->
+            <tr>
+                <th>State</th>
+                <th>Topic</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ram</td>
+                <td>India</td>
+                <td>History</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h1>LIST</h1>
+    <h2>unordered list</h2>
+    <ul>
+        <li>apple</li>
+        <li>banana</li>
+        <li>bananamango</li>
+    </ul>
+    <ul type="circle">
+        <li>apple</li>
+        <li>banana</li>
+        <li>bananamango</li>
+    </ul>
+    <h2>ordered list</h2>
+    <ol type="A" start="4" >
+        <li>saumya</li>
+        <li>ramya</li>
+        <li>ashutosh</li>
+    </ol>
+    <h2>definition list</h2>
+    <dl>
+        <dt>Cya</dt>
+        <dd>An educational platform</dd>
+        <dd>created by saumya pandey</dd>
+        <dt>saumya pandey</dt>
+        <dd>2nd student at iit madras</dd>
+        <dd>learning web dev</dd>
+    </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script src="t5.js"></script> -->
+</body>
+</html>
