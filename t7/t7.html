@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 7 Forms</title>
+    <link rel="stylesheet" href="t7.css">
+</head>
+<body>
+    <h1>Forms & Input types</h1>
+    <hr>
+    <hr>
+    <form>
+        <div>
+        <h2> 1st. Show hone wala text bina label ke likha isme</h2>
+        <label for="user"></label> your name 
+        <input type="text" id="user" name="username" value="saumya"> your name ?
+        <h2>2nd. <h3>dekho ye 1st wale box ko hi indicate karega label, since id same hai sabki, to pahle wale ko priority milegi, aur dekho label se text placeholders me bhi click kaerne se word karta hai </h3></h2>
+        <label for="user">Enter your name please : </label>
+        <input type="text" id="user" name="username" value="saumya">
+        <h2> 3rd. <h3> dekho placeholder me jo likha hai wo nhi, balki value hi box me dikh rha hai, jab default value cut kar dogi tab placeholder dikhega, aur 2nd. wala to isme bhi hai</h3></h2>
+        <label for="user">Enter your name please : </label>
+        <input type="text" id="user" name="username" value="saumya" placeholder="what is your name">
+        </div>
+        <hr>
+
+        <div>
+        <h2>radio buttons</h2>
+        <input type="radio" name="gender" value="male" > male
+        <input type="radio" name="gender" value="female" > female
+        <input type="radio" name="gender" value="others" > others
+        <input type="radio" name="gender" value="na" > na
+        <input type="radio" name="gender" value="not say" > not say 
+        <input type="radio" name="gender" value="female" > female
+
+        <h4>isme female click karne se button click nhi hoga</h4>
+        <input type="radio" name="gender" value="female" id="gen" > female
+        <label for="gen"></label>
+        <h4>isme female click karne se button click hoga</h4>
+        <input type="radio" name="gender" value="female" id="gend" > 
+        <label for="gend">female</label>
+        </div>
+    
+
+        <!-- <div>
+        <h2>Checkbox</h2>
+        <input type="checkbox" name="subject" value="maths" id="sub" > maths
+        <input type="checkbox" name="subject" value="physics" id="sub" > physics
+        <input type="checkbox" name="subject" value="chemistry" id="sub" > chemistry
+        <label for="sub1"></label>
+        <label for="sub2"></label>
+        <label for="sub3"></label>
+        </div> -->
+
+        <!-- <div>
+        <input type="checkbox" name="subject" value="maths" id="sub1" > 
+        <input type="checkbox" name="subject" value="physics" id="sub2" > 
+        <input type="checkbox" name="subject" value="chemistry" id="sub3" > 
+        <label for="sub1">maths</label>
+        <label for="sub2">physics</label>
+        <label for="sub3">chemistry</label>
+        </div> -->
+        <div>
+        <!-- <label for="sub1">maths</label> -->
+        <input type="checkbox" name="subject" value="maths" id="sub1" > 
+        <label for="sub1">maths</label>
+        <label for="sub2">physics</label>
+        <input type="checkbox" name="subject" value="physics" id="sub2" > 
+        <label for="sub3">chemistry</label>
+        <input type="checkbox" name="subject" value="chemistry" id="sub3" > 
+        <!-- <label for="sub1">maths</label> -->
+        <!-- <label for="sub2">physics</label> -->
+        <!-- <label for="sub3">chemistry</label> -->
+        </div>
+
+        <!-- ye dekho kya kya galti karti ho tum -->
+        <!-- <div>
+            <label for="comment">enter comment</label>
+            <input type="textarea" name="comment" rows="100" cols="200" id="comment">
+        </div> -->    
+        
+        <div>
+            <textarea name="comment" id="comment" id="comment" rows="5"  cols="20">enter your comment</textarea>
+        </div>
+        <div>
+            <label for="comment">enter your comment here</label>
+            <br>
+            <textarea name="comment" id="comment" id="comment" rows="5"  cols="20">enter your comment</textarea>
+        </div>
+
+        <div>
+            <label for="fru">FRUIT CHART</label>
+            <select name="fruits" id="fru"> 
+                <option value="apple">apple</option>
+                <option value="mango">mango</option>
+                <option value="banana">banana</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="text" required name="username" placeholder="your name ?">
+            <input type="text" autofocus name="username" placeholder="your name ?">
+            <input type="text" pattern="[0-9]{3}" name="username" placeholder="your name ?">
+        </div>
+
+    
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+</body>
+</html>
