@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice t10_tak</title>
+    <link rel="stylesheet" href="t10_tak.css">
+</head>
+
+<body>
+    <h1>What we studied till 10 lectures?</h1>
+    <h2>lecture 3</h2>
+    <b>css and js files, html files se connect karna and website mobile par dekhna</b>
+
+    <h2>lecture 4 - heading tag, anchor tag and target blank set karna</h2>
+    <a href="https://www.google.com">google</a>
+    <a href="https://www.google.com" target="_blank">google</a>
+
+    <h2>lecture 5 - img, table, list</h2>
+    <img src="../imgOut/ct.png" alt="ct" height="200">
+    <table>
+        <thead>
+            <caption>Your Table</caption>
+            <tr>
+                <th>name</th>
+                <th>class</th>
+                <th>subject</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>saumya</td>
+                <td>2nd year</td>
+                <td>web dev</td>
+            </tr>
+            <tr>
+                <td>rajnigandha</td>
+                <td>3rd year</td>
+                <td>web dev</td>
+            </tr>
+        </tbody>
+        <br>
+        <tfoot>ye tha aapka table</tfoot>
+    </table>
+
+    <table>
+        <caption>2nd. table(I know it's messy)</caption>
+        <thead>
+            <tr>
+                <th rowspan="2" colspan="2">Name</th>
+                <th>Year</th>
+                <th>Research</th>
+            </tr>
+            <tr>
+                <th>College</th>
+                <th>CGPA</th>
+                <th>Project(s)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>saumya pandey</td>
+                <td>2nd year</td>
+                <td>virtual campus</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul type="circle">
+        <li>ram</li>
+        <li>shyam</li>
+        <li>sita</li>
+        <li>sitamata</li>
+    </ul>
+
+    <ol type="i">
+        <li>apple</li>
+        <li>mango</li>
+        <li>grapes</li>
+    </ol>
+
+    <dl>
+        <dt>html</dt>
+        <dd>html is hypertext markup language</dd>
+        <dt>css</dt>
+        <dd>cascading style sheet</dd>
+    </dl>
+
+    <h3>Something extra</h3>
+    H<sub>2</sub>O
+    <br>
+    a <sup>2</sup> + b <sup>2</sup>
+    <pre>                      ye hai pre tag, spaces and all web page par show karwane ke liye</pre>
+
+
+    <h2>Lecture 6 : Core web vitals and SEO</h2>
+    <h2>Lecture 7 : Forms & Input tags</h2>
+
+    <form action="post">
+        <h4>#Multipurpose Event Dashboard#</h4>
+        <!-- <pre>PART 1 : User Profile & Contact Info</pre> --> niche wala better method hai
+        <fieldset>PART 1 : User Profile & Contact Info</fieldset>
+        <div>
+            <label for="user">Name</label>
+            <input type="text" name="username" placeholder="Enter your name" id="user" required>
+        </div>
+        <br>
+        <div>
+            <label for="email">emailId</label>
+            <input type="email" id="email" name="emailId" required>
+        </div>
+        <br>
+        <div>
+            <label for="mobile">Mobile No.</label>
+            <input type="tel" id="mobile" name="mobileNo." pattern="[0-9]{10}" required>
+        </div>
+        <br>
+        Upload your profile picture
+        <input type="file" name="profilePic" accept="image/*">
+
+        <!-- <pre>PART 2 : Event Selection & Ticket Booking</pre> -->
+        <fieldset>PART 2 : Event Selection & Ticket Booking</fieldset>
+        <label for="e">Events</label>
+        <select name="Event" id="e">
+            <option value="Tech Conference">Tech Conference</option>
+            <option value="Music Concert">Music Concert</option>
+            <option value=" Art Workshop"> Art Workshop</option>
+        </select>
+        <!-- <h4>or</h4> -->
+        <br>
+        <label for="">(or)Events</label>
+        <br>
+        <input type="radio" name="event" id="e2" value="tech">
+        <label for="e2">Tech Conference</label>
+        <br>
+        <input type="radio" name="event" id="e3" value="music">
+        <label for="e3">Music concert</label>
+        <br>
+        <input type="radio" name="event" id="e4" value="art">
+        <label for="e4">Art Workshop</label>
+        <br>
+        <br>
+        <div>
+            <label for="t">Ticket class</label>
+            <select name="ticket" id="t">
+                <option value="VIP">VIP</option>
+                <option value="Premium">Premium</option>
+                <option value="General">General</option>
+            </select>
+        </div>
+        <br>
+        <label for="n">How many tickets do you want</label>
+        <input type="number" id="n" name="ticketNo." min="1" max="5">
+        <br>
+        <br>
+        <label for="d">Date</label>
+        <input type="date" name="date" id="d">
+        <br>
+        <br>
+        <label for="t">Time</label>
+        <input type="time" name="time" id="t">
+
+        <!-- <pre>Part 3: Preferences & Add-ons</pre> -->
+        <fieldset>Part 3: Preferences & Add-ons</fieldset>
+
+        <label for="">Food Preferences</label>
+        <br>
+        <input type="checkbox" name="food" id="f1">
+        <label for="f1">veg</label>
+        <br>
+        <input type="checkbox" name="food" id="f2">
+        <label for="f2">vegan</label>
+        <br>
+        <input type="checkbox" name="food" id="f3">
+        <label for="f3">Jain food</label>
+        <br>
+        <input type="checkbox" name="food" id="f4">
+        <label for="f4">No meal</label>
+        <br>
+        <label for="s">Select your state</label>
+        <select name="state" id="s">
+            <option value="UP">UP</option>
+            <option value="J&K">J&K</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Hariyana">Hariyana</option>
+            <option value="Madhya pradesh">Madhya pradesh</option>
+            <option value="Keral">Keral</option>
+            <option value="Tamilnadu">Tamilnadu</option>
+            <option value="other">other</option>
+        </select>
+
+        <!-- <pre>Part 4: Feedback & Rating</pre> -->
+        <fieldset>Part 4: Feedback & Rating</fieldset>
+        <!-- <legend>Part 4: Feedback & Rating</legend> -->
+        <label for="e">Exicitement level</label>
+        <!-- <input type="number" name="Exicitement level" id="e" pattern="[1-10]{2}"> -->
+        <input type="range" min="1" max="10" name="Exicitement">
+        <br>
+        <label for="sp">Special Requests ya Suggestions</label>
+        <br>
+        <textarea name="Special Requests ya Suggestions" id="sp" placeholder="Please Give us your Feedback" rows="5"
+            cols="50"></textarea>
+        <br>
+        <button>Submit</button>
+        <br>
+        <br>
+        <button type="reset">Reset</button>
+    </form>
+
+    <h2>Lecture 08 : Inline and block elements</h2>
+
+    <div id="d1">div : a block element</div>
+    <span>span : an inline element</span>
+    <a href="#">anchor tag : an inline ele.</a>
+
+    <h2>Lecture 09 : Id & Classes attributes</h2>
+    <input type="text" name="user" class="naam" id="n1">
+    <input type="text" name="user" class="naam" id="n2">
+
+    <h2>Lecture 10 : Video, audio, iframe tag</h2>
+
+    <!-- <video src="https://youtu.be/q_-crSQ3qQU?si=vm4sTGNc7lC6X02Y" height="500"></video>   youtube videos, video tag support nhi karte -->
+     controls jarur use karna otherwise video aur audio dono show nhi hogi page par 
+    <video src="video.mp4" height="500" controls></video>    
+
+    <audio src="#" controls></audio>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/q_-crSQ3qQU?si=vm4sTGNc7lC6X02Y"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <svg>
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="yellow" ></circle>
+    </svg>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
