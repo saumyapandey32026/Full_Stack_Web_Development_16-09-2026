@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 13</title>
+    <link rel="stylesheet" href="t13.css">
+</head>
+
+<body>
+    <h2>HTML entities</h2>
+    <b>HTML Entity = special character ko HTML me safely represent karne ka way.</b>
+    <p>Price: &#8377;500</p>
+    <p> 5 &lt; 10</p>
+    <p> &copy; </p>
+
+    <h2>blockquote tag </h2>
+    <b> blockquote ka use long/block-level quotation ke liye hota hai.</b>
+    <p>Einstein said:</p>
+    <blockquote>
+        The important thing is not to stop questioning.
+    </blockquote>
+
+    <h3>cite attribute</h3>
+    <b>cite attribute : Tum source bhi specify kar sakti ho:</b>
+    <blockquote cite="https://example.com">
+        Some quoted text goes here.
+    </blockquote>
+    <b>cite source ko identify karta hai; normally URL user ko directly visible nahi hota.</b>
+    <br>
+    <br>
+
+    <h2>q tag </h2>
+    <b> &lt;q&gt; — Short quotation
+        Agar quotation chhoti hai aur paragraph ke andar inline hai:</b>
+
+    <p>
+        My teacher always says
+        <q>Practice makes progress.</q>
+    </p>
+
+    <b>Browser generally quotation marks add karega:</b> My teacher always says "Practice makes progress."
+
+    <br>
+    <br>
+
+    <h2> code tag </h2>
+    <b>&lt;code&gt; — Code ko represent karna :- Agar webpage par programming code dikhana hai:</b>
+
+    <p>
+        Use <code>print()</code> to display output in Python.
+    </p>
+
+    <b>Output conceptually: Use print() to display output in Python.</b>
+
+    <b>Browser &lt;code&gt; ko programming/computer code ke roop me semantically identify karta hai.</b>
+
+<pre>   
+<code>
+a = "ram"
+b = 3
+s = a*b 
+print(s)
+</code>
+</pre>
+
+
+    <pre>
+<code>
+def hello():
+    print("Hello World")
+
+hello()
+</code>
+</pre>
+<b>Why <pre>?
+<pre> whitespace aur line breaks ko preserve karta hai.</b>
+
+<h2>HTML Canvas</h2>
+<canvas width="400" height="200"></canvas>
+<b>&lt;canvas&gt; HTML ka ek drawing area provide karta hai. Lekin sirf ye likhne se automatically drawing nahi banegi. Canvas ko normally JavaScript ke through draw karte hain.</b>
+</body>
+
+</html>
