@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Defaults</title>
+    <!-- <link rel="stylesheet" href="assets/style.css"> -->
+     <!-- or ye bhi kar sakte hain with the help of jinja2    -->
+      <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" >
+    <!-- <script src="assets/script.js"></script> -->
+     <script src="{{url_for('static', filename='script.js')}}"></script>
+</head>
+<body>
+    <h1>Learning Changing Default Folder Name</h1>
+    <p>Aapko flask ke andar hi static folder ka name change karna hota hai is case me, jha aapne flask application ko create kiya tha wahi se aap karte ho change name.</p>
+</body>
+</html>
