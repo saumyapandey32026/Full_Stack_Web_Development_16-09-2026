@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcomePage</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    {{header | safe}}
+    <h1>Welcome back {{name}}!  </h1>
+    <h3>your password is {{password}}  </h3>
+
+    <b>Using If-else in html with thw help og jinja2</b>
+    {% if name %}
+    <h1>hello {{name}}! </h1>
+    {% else %}
+    <h1>hello, Anonumus!</h1>
+    {% endif %}
+
+    <b>for loop in html : jinja2</b>
+    <h3>{{name}} your friend's name are:  </h3>
+    <ul>
+        {% for f in frds %}
+        <li>{{f}} </li>
+        {%endfor%}
+    </ul>
+    {% if name in frds %}
+    <h3>mentioning your name in friend's list is self-love {{name}} </h3>
+    {% endif %}
+
+</body>
+</html>
