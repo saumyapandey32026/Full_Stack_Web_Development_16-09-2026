@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <h1>AI Personal Assistant</h1>
+    <div class="container">
+        <h2>Ask Anything</h2>
+        <form id="askForm" action="/ask" method="post">
+            <input type="text" name="question" placeholder="Ask Anything..." required>
+            <button type="submit">Ask</button>
+        </form>
+        <p id="loader">Loading...</p>
+        <p id="answer"></p>
+
+        <h2>Summarize Email</h2>
+        <form id="askEmail" action="/summarize" method="post">
+            <textarea type="email" name="email" placeholder="Paste your email here..." required></textarea>
+            <button type="submit">Summarize</button>
+        </form>
+        <p id="loaderSummary">Loading...</p>
+        <p id="summary"></p>
+    </div>
+
+    <pre>
+          
+
+        Just completed Flask, I should say "I have only just grasped the essence of Flask, but there's a lot more to learn. Actually I am in hurry, Byeeee...."
+    </pre>
+
+</body>
+
+</html>
