@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MessageFlashing</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+        {% with messages = get_flashed_messages(category_filter=["login_success"]) %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <h1>Learning Message Flashing & Redirects</h1>
+    <p>Click here to go on the contact page => <a href="/contact">Contact Us</a></p>
+
+    <hr>
+    <h2>This is main page!</h2>
+</body>
+
+</html>
