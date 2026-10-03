@@ -1,0 +1,18 @@
+*{
+    background-color: rgb(113, 222, 224);
+}
+form{
+    height: 100px;
+    width: 200px;
+    border: 2px solid black;
+    background-color: rgb(216, 199, 233);
+}
+input{
+    background-color: rgb(216, 199, 233)  ;
+}
+button{
+    background-color:   rgb(216, 199, 233);
+}
+h2{
+    color: blue;
+}
