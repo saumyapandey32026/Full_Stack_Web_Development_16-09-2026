@@ -1,0 +1,1 @@
+alert("Welcome to MAD 1 day 1...")
