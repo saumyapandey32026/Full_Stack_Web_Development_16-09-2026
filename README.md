@@ -15,7 +15,7 @@ I am currently learning and actively implementing the following technologies for
 - 🌶️ **Flask** – Backend web framework for building routing and APIs.
 - 🎨 **Bootstrap** – Responsive frontend styling and UI design.
 - 📑 **Jinja2** – Dynamic HTML templating engine integrated with Flask.
-- 🗄️ **SQL & SQLAlchemy** – Database management and Object-Relational Mapping (ORM).
+- 🗄️ **Database & ORM:** SQLite driven by **SQL** principles and managed programmatically using **SQLAlchemy** models. 
 
 ---
 
