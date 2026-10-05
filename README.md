@@ -7,3 +7,15 @@ This repository tracks **my personal learning journey** and does not strictly mi
 
 Please treat this as a reflection of my practical progress rather than the official course timeline! 
 (If you came here for that, just clearing your confusion 😂)
+
+## 🛠️ Tech Stack Under Development (Sept. 2026 Term)
+
+I am currently learning and actively implementing the following technologies for full-stack web development and my MAD-1 projects:
+
+- 🌶️ **Flask** – Backend web framework for building routing and APIs.
+- 🎨 **Bootstrap** – Responsive frontend styling and UI design.
+- 📑 **Jinja2** – Dynamic HTML templating engine integrated with Flask.
+- 🗄️ **SQL & SQLAlchemy** – Database management and Object-Relational Mapping (ORM).
+
+---
+
