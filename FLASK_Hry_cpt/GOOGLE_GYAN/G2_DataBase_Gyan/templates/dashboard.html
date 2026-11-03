@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store Inventory Dashboard</title>
+</head>
+<body>
+
+    <h1>Store Inventory Dashboard</h1>
+    <hr>
+
+    <!-- 🌟 SECTION 1: ADD ITEM FORM -->
+    <h3>Add New Item to Database</h3>
+    <!-- action="/dashboard" ka matlab hai data isi page ke route par POST hoga -->
+    <form method="POST" action="/dashboard">
+        
+        <label>Item Name:</label>
+        <!-- name="form_item_name" se Python request.form.get() ise pakdega -->
+        <input type="text" name="form_item_name" placeholder="e.g., Laptop, Mouse" required>
+        &nbsp;&nbsp;
+
+        <label>Item Price (INR):</label>
+        <!-- name="form_item_price" se Python iska price pakdega -->
+        <input type="number" name="form_item_price" placeholder="e.g., 500" required>
+        &nbsp;&nbsp;
+
+        <input type="submit" value="Add Item to Table">
+    </form>
+
+    <br><br>
+    <hr>
+
+    <!-- 🌟 SECTION 2: DISPLAY ITEMS TABLE -->
+    <h3>All Available Items in Database</h3>
+    
+    <!-- Ek simple clean HTML table design bina kisi bootstrap ke -->
+    <table border="1" cellpadding="10" cellspacing="0" style="width: 60%; text-align: left;">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th>Serial No.</th>
+                <th>Item ID</th>
+                <th>Item Name</th>
+                <th>Item Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Jinja Loop: Database se aayi 'html_items_list' par chalega -->
+            {% for single_item in html_items_list %}
+            <tr>
+                <!-- loop.index automatic 1, 2, 3 serial order banayega page par -->
+                <td>{{ loop.index }}</td>
+                <!-- Table column 'item_id' se value print ki -->
+                <td>{{ single_item.item_id }}</td>
+                <!-- Table column 'item_name' se value print ki -->
+                <td>{{ single_item.item_name }}</td>
+                <!-- Table column 'item_price' se value print ki -->
+                <td>Rs. {{ single_item.item_price }}</td>
+            </tr>
+            <!-- Agar database khali hai toh ye empty block chalega -->
+            {% else %}
+            <tr>
+                <td colspan="4" style="text-align: center; color: gray;">No items added yet! Fill the form above.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

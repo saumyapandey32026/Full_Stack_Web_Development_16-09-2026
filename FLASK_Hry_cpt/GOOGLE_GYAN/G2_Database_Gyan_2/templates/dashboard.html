@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store Inventory Dashboard</title>
+</head>
+<body>
+
+    <!-- Wapas home page par jaane ke liye link -->
+    <a href="/">&larr; Back to Home Page</a>
+    
+    <h1>Store Inventory Dashboard</h1>
+    <hr>
+
+    <!-- 🌟 FORM SECTION: Naya item add karne ke liye -->
+    <h3>Add New Item to Database</h3>
+    <form method="POST" action="/dashboard">
+        
+        <label>Item Name:</label>
+        <input type="text" name="form_item_name" placeholder="e.g., Laptop, Mouse" required>
+        &nbsp;&nbsp;
+
+        <label>Item Price (INR):</label>
+        <input type="number" name="form_item_price" placeholder="e.g., 500" required>
+        &nbsp;&nbsp;
+
+        <input type="submit" value="Add Item to Table">
+    </form>
+
+    <br><br>
+    <hr>
+
+    <!-- 🌟 DISPLAY SECTION: Database se aaye data ko table me dikhane ke liye -->
+    <h3>All Available Items in Database</h3>
+    
+    <table border="1" cellpadding="10" cellspacing="0" style="width: 60%; text-align: left;">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th>Serial No.</th>
+                <th>Item ID</th>
+                <th>Item Name</th>
+                <th>Item Price</th>
+                <!-- 1. Naya Table Header -->
+                <th>Date & Time Added</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Jinja Loop: 'html_items_list' variable jo app.py se aaya hai, us par chalega -->
+            {% for single_item in html_items_list %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ single_item.item_id }}</td>
+                <td>{{ single_item.item_name }}</td>
+                <td>Rs. {{ single_item.item_price }}</td>
+                <!-- 2. Naya Table Data (strftime se date format sundar dikhega) -->
+                <td>{{ single_item.date_added.strftime('%Y-%m-%d %H:%M') }}</td>
+            </tr>
+            <!-- Agar database me koi data nahi hoga toh ye niche wali line dikhegi -->
+            {% else %}
+            <tr>
+                <td colspan="4" style="text-align: center; color: gray;">
+                    No items added yet! Fill the form above.
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

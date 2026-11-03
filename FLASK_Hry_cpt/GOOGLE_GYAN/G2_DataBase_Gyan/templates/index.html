@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fill Your Details</title>
+</head>
+<body>
+
+    <h1>User Information Form</h1>
+
+    <!-- 🌟 ACTION ATTRIBUTE KI LOGIC:
+         action="/dashboard" ka matlab hai ki submit button dabate hi ye form 
+         apna saara boriya-bistar (data) lekar '/dashboard' wale route par chala jaye. -->
+    <form method="POST" action="/dashboard">
+        
+        <label>Your Name:</label>
+        <input type="text" name="html_name_field" placeholder="Enter name" required>
+        <br><br>
+
+        <label>Your Email:</label>
+        <input type="email" name="html_email_field" placeholder="Enter email" required>
+        <br><br>
+
+        <label>Your Password:</label>
+        <input type="password" name="html_password_field" placeholder="Enter password" required>
+        <br><br>
+
+        <input type="submit" value="Go to My Dashboard">
+    </form>
+
+</body>
+</html>
