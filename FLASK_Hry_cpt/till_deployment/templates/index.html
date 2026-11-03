@@ -56,7 +56,7 @@
 
     <!-- 1st container  -->
     <div class="container my-3">
-        <form action="/dashboard" method="post">
+        <form action="/" method="post">
             <div class="form-group">
                 <label for="title">Todo title</label>
                 <input type="text" class="form-control" name="title1" id="title" aria-describedby="emailHelp">
@@ -64,7 +64,7 @@
             </div>
             <div class="form-group">
                 <label for="desc">Todo Description</label>
-                <input type="password" name="desc1" class="form-control" id="desc">
+                <input type="text" name="desc1" class="form-control" id="desc">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
@@ -84,7 +84,7 @@
                 </tr>
             </thead>
             <tbody>
-                {% for todos in all_todo %}
+                {% for todos in todoList_html %}
                 <tr>
                     <!-- <th scope="row">1</th> -->
                     <!-- <th scope="row">{{todos.sno}}</th> -->

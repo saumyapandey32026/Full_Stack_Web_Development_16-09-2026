@@ -15,7 +15,8 @@ class StoreItem(db.Model):
     item_name = db.Column(db.String(200), nullable=False)
     item_price = db.Column(db.Integer, nullable=False)
     # 2. 🌟 Naya Column jodiye (Bina kisi cut/deprecation warning ke)
-    date_added = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
+    # date_added = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
+    date_added = db.Column(db.DateTime, default=datetime.now)
 
     def __repr__(self):
         return f"{self.item_id} - {self.item_name} - Rs.{self.item_price}"
@@ -49,7 +50,7 @@ def manage_dashboard_items():
     # Chahe naya data add hua ho ya normal page khula ho, hum hamesha
     # database se saare items utha kar HTML ko bhejenge dikhane ke liye
     all_saved_items = StoreItem.query.all()
-    return render_template("dashboard.html", html_items_list = all_saved_items)
+    return render_template("dashboard.html", html_items_list = all_saved_items, datetime=datetime)
 
 if __name__ == "__main__":
     app.run(debug=True)

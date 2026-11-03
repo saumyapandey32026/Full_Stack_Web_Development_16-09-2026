@@ -53,7 +53,16 @@
                 <td>{{ single_item.item_name }}</td>
                 <td>Rs. {{ single_item.item_price }}</td>
                 <!-- 2. Naya Table Data (strftime se date format sundar dikhega) -->
-                <td>{{ single_item.date_added.strftime('%Y-%m-%d %H:%M') }}</td>
+                <!-- <td>{{ single_item.date_added.strftime('%Y-%m-%d %H:%M') }}</td> -->
+
+                <!-- dashboard.html me date wale <td> ko bilkul simple aise likhiye -->
+                <td>
+                    {% if single_item.date_added %}
+                        {{ single_item.date_added.strftime('%Y-%m-%d %H:%M') }}
+                    {% else %}
+                        No Date
+                    {% endif %}
+                </td>
             </tr>
             <!-- Agar database me koi data nahi hoga toh ye niche wali line dikhegi -->
             {% else %}
