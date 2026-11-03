@@ -46,7 +46,7 @@
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <form  class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
@@ -56,15 +56,15 @@
 
     <!-- 1st container  -->
     <div class="container my-3">
-        <form>
+        <form action="/dashboard" method="post">
             <div class="form-group">
                 <label for="title">Todo title</label>
-                <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
+                <input type="text" class="form-control" name="title1" id="title" aria-describedby="emailHelp">
                 <small id="emailHelp" class="form-text text-muted"></small>
             </div>
             <div class="form-group">
                 <label for="desc">Todo Description</label>
-                <input type="password" class="form-control" id="desc">
+                <input type="password" name="desc1" class="form-control" id="desc">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

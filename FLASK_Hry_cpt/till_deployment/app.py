@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime, timezone
 
@@ -19,16 +19,26 @@ class Todo(db.Model):
 
 @app.route("/")
 def hello():
-    todo = Todo(title= "first todo", desc="start studying!")
-    db.session.add(todo)
-    db.session.commit()
+    # todo = Todo(title1= title, desc1=)
+    # db.session.add(todo)
+    # db.session.commit()
     return render_template("index.html")
+    
 
-@app.route("/show")
+@app.route("/dashboard")
 def show():
-    allTodo = Todo.query.all()
-    # print(allTodo)
-    return render_template("index.html", all_todo = allTodo)
+        if request.method == "POST":
+            # title = request.form['title1']
+            title = request.form.get("title1")
+            # desc = request.form['desc1']
+            desc = request.form.get("desc1")
+            # print("post")
+            # todo = Todo(title1= title, desc1=desc)
+
+        # allTodo = Todo.query.all()
+        # print(allTodo)
+        # return render_template("dashboard.html", all_todo = allTodo)
+        return render_template("dashboard.html", t = title, d = desc )
 
 if __name__ == "__main__":
     app.run(debug=True)
